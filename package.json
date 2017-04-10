@@ -1,0 +1,32 @@
+{
+  "name": "react-native-airbitz-io",
+  "version": "0.1.0",
+  "description": "IO dependencies for running airbitz-core-js on React Native",
+  "url": "https://airbitz.co",
+  "author": "Airbitz, Inc.",
+  "contributors": [
+    "William Swanson <william@airbitz.co>"
+  ],
+  "license": "SEE LICENSE IN LICENSE",
+  "main": "lib/react-native-airbitz-io.js",
+  "dependencies": {},
+  "devDependencies": {
+    "husky": "^0.13.3",
+    "rollup": "^0.41.6",
+    "rollup-plugin-buble": "^0.15.0",
+    "standard": "^10.0.1"
+  },
+  "files": [
+    "lib/*"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Airbitz/react-native-airbitz-io.git"
+  },
+  "scripts": {
+    "build": "rollup -c",
+    "lint": "standard '*.js' 'src/**/*.js'",
+    "precommit": "npm run lint",
+    "prepublish": "npm run lint && npm run build"
+  }
+}
