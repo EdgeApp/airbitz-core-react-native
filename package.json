@@ -10,13 +10,17 @@
   "license": "SEE LICENSE IN LICENSE",
   "main": "lib/react-native-airbitz-io.js",
   "dependencies": {
-    "react-native-fs": "^2.1.0-rc.1"
+    "react-native-fs": "^2.1.0-rc.1",
+    "react-native-randombytes": "^2.2.0",
+    "rfc4648": "^0.9.1"
   },
   "devDependencies": {
     "husky": "^0.13.3",
     "rollup": "^0.41.6",
     "rollup-plugin-buble": "^0.15.0",
-    "standard": "^10.0.1"
+    "rollup-plugin-commonjs": "^8.0.2",
+    "standard": "^10.0.1",
+    "webpack": "^2.3.3"
   },
   "files": [
     "lib/*"
@@ -26,7 +30,7 @@
     "url": "git@github.com:Airbitz/react-native-airbitz-io.git"
   },
   "scripts": {
-    "build": "rollup -c",
+    "build": "webpack && rollup -c",
     "lint": "standard '*.js' 'src/**/*.js'",
     "precommit": "npm run lint",
     "prepublish": "npm run lint && npm run build"
