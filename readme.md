@@ -8,12 +8,16 @@ Use it like this:
 import { makeContext } from 'airbitz-core-js'
 import { makeReactNativeIo } from 'react-native-airbitz-io'
 
-const context = makeContext({
-  apiKey: '...',
-  appId: '...',
-  io: makeReactNativeIo()
+const contextPromise = makeReactNativeIo().then(io => {
+  return makeContext({
+    apiKey: '...',
+    appId: '...',
+    io
+  })
 })
 ```
+
+Note that `makeReactNativeIo` calls out to native code, so it returns a `Promise` object.
 
 ## Installing
 

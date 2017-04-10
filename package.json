@@ -9,7 +9,9 @@
   ],
   "license": "SEE LICENSE IN LICENSE",
   "main": "lib/react-native-airbitz-io.js",
-  "dependencies": {},
+  "dependencies": {
+    "react-native-fs": "^2.1.0-rc.1"
+  },
   "devDependencies": {
     "husky": "^0.13.3",
     "rollup": "^0.41.6",
