@@ -14,7 +14,7 @@ function getRandom (length) {
       if (err) {
         reject(err)
       } else {
-        resolve(base64.parse(base64String))
+        resolve(base64.parse(base64String.trim()))
       }
     })
   })
