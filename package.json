@@ -1,6 +1,6 @@
 {
   "name": "react-native-airbitz-io",
-  "version": "0.1.0",
+  "version": "0.3.0",
   "description": "IO dependencies for running airbitz-core-js on React Native",
   "url": "https://airbitz.co",
   "author": "Airbitz, Inc.",
@@ -23,7 +23,9 @@
     "webpack": "^2.3.3"
   },
   "files": [
-    "lib/*"
+    "changelog.md",
+    "lib/*",
+    "LICENSE"
   ],
   "repository": {
     "type": "git",
