@@ -41,7 +41,17 @@ export function makeReactNativeIo () {
   return Promise.all([getRandom(32), loadStorage()]).then(values => {
     const [entropy, items] = values
     return {
-      console,
+      console: {
+        info (...args) {
+          console.log(...args)
+        },
+        warn (...args) {
+          console.log(...args)
+        },
+        error (...args) {
+          console.log(...args)
+        }
+      },
       fetch: (...rest) => window.fetch(...rest),
       localStorage: new LocalStorage(items),
       random: makeRandomGenerator(entropy)
