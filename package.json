@@ -1,6 +1,6 @@
 {
   "name": "react-native-airbitz-io",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "IO dependencies for running airbitz-core-js on React Native",
   "url": "https://airbitz.co",
   "author": "Airbitz, Inc.",
