@@ -1,10 +1,13 @@
-# Airbitz React Native IO depdendencies
+# Airbitz Core for React Native
 
-This library creates an `io` object with all the depenencies needed to run [`airbitz-core-js`](https://github.com/Airbitz/airbitz-core-js) on React Native.
+This library provides the dependencies needed to run [`airbitz-core-js`](https://github.com/Airbitz/airbitz-core-js) on React Native.
 
 Use it like this:
 
 ```js
+
+// XXX fix to use makeReactNativeContext()
+
 import { makeContext } from 'airbitz-core-js'
 import { makeReactNativeIo } from 'react-native-airbitz-io'
 

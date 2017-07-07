@@ -1,22 +1,23 @@
 {
-  "name": "react-native-airbitz-io",
-  "version": "0.3.1",
-  "description": "IO dependencies for running airbitz-core-js on React Native",
+  "name": "airbitz-core-react-native",
+  "version": "0.3.2",
+  "description": "Wrapper for airbitz-core-js for running on React Native",
   "homepage": "https://airbitz.co",
   "license": "SEE LICENSE IN LICENSE",
   "author": "Airbitz, Inc.",
   "contributors": [
-    "William Swanson <william@airbitz.co>"
+    "William Swanson <william@airbitz.co>",
+    "Paul Puey <paul@airbitz.co>"
   ],
   "files": [
     "changelog.md",
     "lib/*",
     "LICENSE"
   ],
-  "main": "lib/react-native-airbitz-io.js",
+  "main": "lib/airbitz-core-react-native.js",
   "repository": {
     "type": "git",
-    "url": "git@github.com:Airbitz/react-native-airbitz-io.git"
+    "url": "git@github.com:Airbitz/airbitz-core-react-native.git"
   },
   "scripts": {
     "build": "webpack && rollup -c",
@@ -27,6 +28,7 @@
   "dependencies": {
     "react-native-fs": "^2.1.0-rc.1",
     "react-native-randombytes": "^2.2.0",
+    "react-native-fast-crypto": "file:../react-native-fast-crypto",
     "rfc4648": "^0.9.1"
   },
   "devDependencies": {
