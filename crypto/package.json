@@ -1,0 +1,11 @@
+{
+  "name": "crypto",
+  "version": "0.0.1",
+  "description": "Crypto module for react native",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
