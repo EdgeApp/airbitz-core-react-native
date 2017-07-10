@@ -1,9 +1,11 @@
-import crypto from '../tmp/crypto.bundle.js'
+import cryptobundle from '../tmp/crypto.bundle.js'
 import { loadStorage, LocalStorage } from './localStorage.js'
 import { base64 } from 'rfc4648'
+import crypto from 'react-native-fast-crypto'
+import { Platform } from 'react-native'
 
 let RNRandomBytes = require('react-native').NativeModules.RNRandomBytes
-const { hashjs, HmacDRBG } = crypto
+const { hashjs, HmacDRBG } = cryptobundle
 
 /**
  * Wraps the native `randomBytes` function in a `Promise`.
@@ -40,7 +42,7 @@ export function makeRandomGenerator (entropy) {
 export function makeReactNativeIo () {
   return Promise.all([getRandom(32), loadStorage()]).then(values => {
     const [entropy, items] = values
-    return {
+    let io = {
       console: {
         info (...args) {
           console.log(...args)
@@ -56,5 +58,9 @@ export function makeReactNativeIo () {
       localStorage: new LocalStorage(items),
       random: makeRandomGenerator(entropy)
     }
+    if (Platform.OS === 'ios') {
+      io.scrypt = crypto.scrypt
+    }
+    return io
   })
 }
