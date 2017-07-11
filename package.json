@@ -23,12 +23,12 @@
     "build": "webpack && rollup -c",
     "precommit": "npm run lint",
     "lint": "standard '*.js' 'src/**/*.js'",
-    "prepublish": "npm run lint && npm run build"
+    "prepare": "npm run lint && npm run build"
   },
   "dependencies": {
+    "react-native-fast-crypto": "git+ssh://git@github.com:Airbitz/react-native-fast-crypto#1b3bcae11cecf5659109033994a408e1afca8688",
     "react-native-fs": "^2.1.0-rc.1",
     "react-native-randombytes": "^2.2.0",
-    "react-native-fast-crypto": "git+ssh://git@github.com:Airbitz/react-native-fast-crypto#1b3bcae11cecf5659109033994a408e1afca8688",
     "rfc4648": "^0.9.1"
   },
   "devDependencies": {
