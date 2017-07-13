@@ -6,7 +6,9 @@ export default {
   entry: 'src/index.js',
   external: Object.keys(packageJson.dependencies),
   plugins: [
-    buble(),
+    buble({
+      objectAssign: 'Object.assign'
+    }),
     commonjs({
       include: 'tmp/crypto.bundle.js'
     })

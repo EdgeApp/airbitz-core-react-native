@@ -5,23 +5,17 @@ This library provides the dependencies needed to run [`airbitz-core-js`](https:/
 Use it like this:
 
 ```js
+import { makeReactNativeContext } from 'react-native-airbitz-io'
 
-// XXX fix to use makeReactNativeContext()
-
-import { makeContext } from 'airbitz-core-js'
-import { makeReactNativeIo } from 'react-native-airbitz-io'
-
-const contextPromise = makeReactNativeIo().then(io => {
-  return makeContext({
-    apiKey: '...',
-    appId: '...',
-    io
-  })
+const opts = {
+  apiKey: '...',
+  appId: '...'
+}
+makeReactNativeContext(opts).then(context => {
+  // Use the context here...
 })
 ```
 
-Note that `makeReactNativeIo` calls out to native code, so it returns a `Promise` object.
-
 ## Installing
 
-After adding this library using `yarn intall`, use `react-native link` to automatically re-configure the native project files.
+Use `npm intall --save git+ssh://git@github.com/airbitz/airbitz-core-react-native.git` to add this library to your project, and then use `react-native link` to automatically re-configure the native project files.
