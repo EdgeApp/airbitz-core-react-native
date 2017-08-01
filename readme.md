@@ -18,4 +18,8 @@ makeReactNativeContext(opts).then(context => {
 
 ## Installing
 
-Use `npm intall --save git+ssh://git@github.com/airbitz/airbitz-core-react-native.git` to add this library to your project, and then use `react-native link` to automatically re-configure the native project files.
+Use `npm intall --save git+ssh://git@github.com/airbitz/airbitz-core-react-native.git` to add this library to your project, and then do the following to to automatically re-configure the native project files:
+
+    react-native link react-native-fast-crypto
+    react-native link react-native-fs
+    react-native link react-native-randombytes
