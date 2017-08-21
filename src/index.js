@@ -5,6 +5,7 @@ import { base64 } from 'rfc4648'
 import crypto from 'react-native-fast-crypto'
 import { Platform } from 'react-native'
 
+let net = require('react-native-tcp')
 let RNRandomBytes = require('react-native').NativeModules.RNRandomBytes
 const { hashjs, HmacDRBG } = cryptobundle
 
@@ -55,6 +56,7 @@ export function makeReactNativeIo () {
           console.log(...args)
         }
       },
+      net,
       fetch: (...rest) => window.fetch(...rest),
       localStorage: new LocalStorage(items),
       random: makeRandomGenerator(entropy)
