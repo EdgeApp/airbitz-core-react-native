@@ -26,7 +26,7 @@
     "prepare": "npm run lint && npm run build"
   },
   "dependencies": {
-    "airbitz-core-js": "git+ssh://git@github.com/Airbitz/airbitz-core-js.git",
+    "airbitz-core-js": "git+ssh://git@github.com/Airbitz/airbitz-core-js.git#develop",
     "react-native-fast-crypto": "^1.0.1",
     "react-native-fs": "^2.1.0-rc.1",
     "react-native-randombytes": "^2.2.0",

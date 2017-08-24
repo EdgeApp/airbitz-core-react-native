@@ -2,8 +2,3 @@
 /node_modules
 /tmp
 /.idea
-
-# Since we are depending on libraries via git,
-# we always want the latest version:
-yarn.lock
-package-lock.json
