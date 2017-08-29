@@ -6,6 +6,9 @@ import crypto from 'react-native-fast-crypto'
 import { Platform } from 'react-native'
 import net from 'react-native-tcp'
 
+// We are just a wrapper around `airbitz-core-js`, so export that:
+export * from 'airbitz-core-js'
+
 let RNRandomBytes = require('react-native').NativeModules.RNRandomBytes
 const { hashjs, HmacDRBG } = cryptobundle
 
@@ -68,6 +71,9 @@ export function makeReactNativeIo () {
   })
 }
 
+/**
+ * Creates an Airbitz context for use with React Native.
+ */
 export function makeReactNativeContext (opts) {
   return makeReactNativeIo().then(io => makeContext({ ...opts, io }))
 }
