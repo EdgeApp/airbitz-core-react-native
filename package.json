@@ -1,6 +1,6 @@
 {
   "name": "airbitz-core-react-native",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "description": "Wrapper for airbitz-core-js for running on React Native",
   "homepage": "https://airbitz.co",
   "license": "SEE LICENSE IN LICENSE",
@@ -27,7 +27,7 @@
   },
   "dependencies": {
     "airbitz-core-js": "git+ssh://git@github.com/Airbitz/airbitz-core-js.git#develop",
-    "react-native-fast-crypto": "^1.0.1",
+    "react-native-fast-crypto": "^1.1.0",
     "react-native-fs": "^2.1.0-rc.1",
     "react-native-randombytes": "^2.2.0",
     "react-native-tcp": "git+https://github.com/Airbitz/react-native-tcp.git",
