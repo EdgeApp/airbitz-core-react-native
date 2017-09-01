@@ -1,10 +1,10 @@
 import cryptobundle from '../tmp/crypto.bundle.js'
-import { loadStorage, LocalStorage } from './localStorage.js'
 import { makeContext } from 'airbitz-core-js'
 import { base64 } from 'rfc4648'
 import crypto from 'react-native-fast-crypto'
 import { Platform } from 'react-native'
 import net from 'react-native-tcp'
+import { makeReactNativeFolder } from 'disklet'
 
 // We are just a wrapper around `airbitz-core-js`, so export that:
 export * from 'airbitz-core-js'
@@ -45,8 +45,8 @@ export function makeRandomGenerator (entropy) {
  * Gathers the IO resources needed by the Airbitz core library.
  */
 export function makeReactNativeIo () {
-  return Promise.all([getRandom(32), loadStorage()]).then(values => {
-    const [entropy, items] = values
+  return Promise.all([getRandom(32)]).then(values => {
+    const [entropy] = values
     let io = {
       console: {
         info (...args) {
@@ -61,7 +61,7 @@ export function makeReactNativeIo () {
       },
       net,
       fetch: (...rest) => window.fetch(...rest),
-      localStorage: new LocalStorage(items),
+      folder: makeReactNativeFolder(),
       random: makeRandomGenerator(entropy)
     }
     if (Platform.OS === 'ios') {
