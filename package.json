@@ -28,7 +28,7 @@
   "dependencies": {
     "airbitz-core-js": "git+ssh://git@github.com/Airbitz/airbitz-core-js.git#develop",
     "disklet": "^0.2.3",
-    "react-native-fast-crypto": "^1.1.0",
+    "react-native-fast-crypto": "git+ssh://git@github.com/Airbitz/react-native-fast-crypto.git#fix-android",
     "react-native-fs": "^2.1.0-rc.1",
     "react-native-randombytes": "^2.2.0",
     "react-native-tcp": "git+https://github.com/Airbitz/react-native-tcp.git",
