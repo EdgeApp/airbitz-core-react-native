@@ -49,15 +49,9 @@ export function makeReactNativeIo () {
     const [entropy] = values
     let io = {
       console: {
-        info (...args) {
-          console.log(...args)
-        },
-        warn (...args) {
-          console.log(...args)
-        },
-        error (...args) {
-          console.log(...args)
-        }
+        info: console.log,
+        warn: console.warn,
+        error: console.warn
       },
       net,
       fetch: (...rest) => window.fetch(...rest),
