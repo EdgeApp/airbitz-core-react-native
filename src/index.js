@@ -2,7 +2,6 @@ import cryptobundle from '../tmp/crypto.bundle.js'
 import { makeContext } from 'airbitz-core-js'
 import { base64 } from 'rfc4648'
 import crypto from 'react-native-fast-crypto'
-import { Platform } from 'react-native'
 import net from 'react-native-tcp'
 import { makeReactNativeFolder } from 'disklet'
 
@@ -58,9 +57,7 @@ export function makeReactNativeIo () {
       folder: makeReactNativeFolder(),
       random: makeRandomGenerator(entropy)
     }
-    if (Platform.OS === 'ios') {
-      io.scrypt = crypto.scrypt
-    }
+    io.scrypt = crypto.scrypt
     return io
   })
 }
