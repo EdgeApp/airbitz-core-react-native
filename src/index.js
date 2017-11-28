@@ -3,6 +3,7 @@ import { makeContext } from 'airbitz-core-js'
 import { base64 } from 'rfc4648'
 import crypto from 'react-native-fast-crypto'
 import net from 'react-native-tcp'
+import tls from 'react-native-tcp/tls'
 import { makeReactNativeFolder } from 'disklet'
 
 // We are just a wrapper around `airbitz-core-js`, so export that:
@@ -55,7 +56,9 @@ export function makeReactNativeIo () {
       net,
       fetch: (...rest) => window.fetch(...rest),
       folder: makeReactNativeFolder(),
-      random: makeRandomGenerator(entropy)
+      random: makeRandomGenerator(entropy),
+      Socket: net.Socket,
+      TLSSocket: tls.TLSSocket
     }
     io.scrypt = crypto.scrypt
     return io
