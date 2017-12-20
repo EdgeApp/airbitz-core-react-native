@@ -6,8 +6,8 @@
   "license": "SEE LICENSE IN LICENSE",
   "author": "Airbitz, Inc.",
   "contributors": [
-    "William Swanson <william@airbitz.co>",
-    "Paul Puey <paul@airbitz.co>"
+    "William Swanson <william@edgesecure.co>",
+    "Paul Puey <paul@edgesecure.co>"
   ],
   "files": [
     "changelog.md",
@@ -28,7 +28,7 @@
   "dependencies": {
     "airbitz-core-js": "git://github.com/Airbitz/airbitz-core-js.git#develop",
     "disklet": "^0.2.5",
-    "react-native-fast-crypto": "^1.2.4",
+    "react-native-fast-crypto": "^1.3.0",
     "react-native-fs": "^2.1.0-rc.1",
     "react-native-randombytes": "^2.2.0",
     "react-native-tcp": "git://github.com/Airbitz/react-native-tcp.git",

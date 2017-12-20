@@ -3,6 +3,7 @@ import { makeContext } from 'airbitz-core-js'
 import { base64 } from 'rfc4648'
 import crypto from 'react-native-fast-crypto'
 import net from 'react-native-tcp'
+import { Platform } from 'react-native'
 import tls from 'react-native-tcp/tls'
 import { makeReactNativeFolder } from 'disklet'
 
@@ -61,6 +62,9 @@ export function makeReactNativeIo () {
       TLSSocket: tls.TLSSocket
     }
     io.scrypt = crypto.scrypt
+    if (Platform.OS === 'ios') {
+      io.secp256k1 = crypto.secp256k1
+    }
     return io
   })
 }
