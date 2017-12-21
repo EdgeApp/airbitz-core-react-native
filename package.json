@@ -1,6 +1,6 @@
 {
   "name": "airbitz-core-react-native",
-  "version": "0.3.7",
+  "version": "0.3.8",
   "description": "Wrapper for airbitz-core-js for running on React Native",
   "homepage": "https://airbitz.co",
   "license": "SEE LICENSE IN LICENSE",
