@@ -62,6 +62,7 @@ export function makeReactNativeIo () {
     }
     io.scrypt = crypto.scrypt
     io.secp256k1 = crypto.secp256k1
+    io.pbkdf2 = crypto.pbkdf2
     return io
   })
 }
