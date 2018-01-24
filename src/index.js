@@ -58,7 +58,7 @@ export function makeReactNativeIo () {
       folder: makeReactNativeFolder(),
       random: makeRandomGenerator(entropy),
       Socket: net.Socket,
-      TLSSocket: tls.TLSSocket
+      TLSSocket: tls.TLSSocket | tls.Socket // Some versions use the 2nd name
     }
     io.scrypt = crypto.scrypt
     io.secp256k1 = crypto.secp256k1
