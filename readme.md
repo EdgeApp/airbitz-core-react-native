@@ -1,25 +1,5 @@
 # Airbitz Core for React Native
 
-This library provides the dependencies needed to run [`airbitz-core-js`](https://github.com/Airbitz/airbitz-core-js) on React Native.
+This library is deprecated. Please install [`edge-login`](https://www.npmjs.com/package/edge-login) directly, which now includes built-in support for React Native.
 
-Use it like this:
-
-```js
-import { makeReactNativeContext } from 'react-native-airbitz-io'
-
-const opts = {
-  apiKey: '...',
-  appId: '...'
-}
-makeReactNativeContext(opts).then(context => {
-  // Use the context here...
-})
-```
-
-## Installing
-
-Use `npm intall --save git+ssh://git@github.com/airbitz/airbitz-core-react-native.git` to add this library to your project, and then do the following to to automatically re-configure the native project files:
-
-    react-native link react-native-fast-crypto
-    react-native link react-native-fs
-    react-native link react-native-randombytes
+The only change in `edge-login` is that the `makeReactNativeContext` function has been renamed to `makeEdgeContext`. Otherwise it is a drop-in replacement.
